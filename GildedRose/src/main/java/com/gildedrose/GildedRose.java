@@ -26,15 +26,11 @@ class GildedRose {
             items[i].quality = items[i].quality + 1;
 
             if (items[i].sellIn < 11) {
-                if (items[i].quality < 50) {
-                    items[i].quality = items[i].quality + 1;
-                }
+                items[i].quality = items[i].quality + 1;
             }
 
             if (items[i].sellIn < 6) {
-                if (items[i].quality < 50) {
-                    items[i].quality = items[i].quality + 1;
-                }
+                items[i].quality = items[i].quality + 1;
             }
 
         }
@@ -74,7 +70,7 @@ class GildedRose {
                 case "Aged Brie" -> doBrie(i);
                 case "Sulfuras, Hand of Ragnaros" -> doSulfuras(i);
                 case "Backstage passes to a TAFKAL80ETC concert" -> doPass(i);
-                case null, default -> doOther(i);
+                default -> doOther(i);
             }
         }
     }
